@@ -1,0 +1,30 @@
+points were very easy to be done but i let them because time left ::
+    class-validator
+    .env, .env-map
+
+    unit test
+    
+
+
+setup ::
+
+    1- git clone >> https://github.com/Mohamed-Taher-Ali/minimal-e-commerce.git
+    2- create a database in pg name >> minimal-e-Commerce OR you can change src/app-configs/config db obj to fit you
+    3- enter root folder
+    4- in terminal >> npm i
+    5- BASE_URL >> http://localhost:3000/api/
+    6- you must add token-value to "authorization" key in request header for authorized routes
+    7- ** all routes authorized except auth
+
+controllers ::
+    1- auth/
+        POST register >> name, email, password
+        POST login >> email, password >> return USER & token
+    2- items/
+        GET /
+        GET itemsByStatus >> with query status >> active | disActive 
+        GET itemById/:id
+    3- orders/
+        GET / >> with 2 query >> status? | id?
+        POST / >> body >> itemsIdsWIthQuantity: [{itemId, quantity},..]
+        PATCH /:id/:status
